@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <header>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/image/cafe braco(2).png"
+                        alt="bootstrap" width="70" height="60">
+                </a>
+                <div class="ms-4">
+                    <span class="fs-5 fw-bold me-4">CaféBr</span>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cardapio.html">Cardápio</a></li>
+                </div>
+            </div>
+        </nav>
+        <!-- FIM NAVBAR -->
+    </header>
+    <main class="container my-5">
+        <container class="container">
+            <div class="container">
+                <div class="d-flex align-items-end">
+                    <div class="flex-grow-1">
+                        <label for="searchInput" class="form-label">Buscar</label>
+                        <input type="text" id="searchInput" class="form-control border border-primary"
+                            placeholder="Digite sua busca...">
+                    </div>
+                    <div class="ms-2">
+                        <button type="button" id="botao" class="btn btn-primary mb-1" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Item</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            Café Expresso
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </container>
+        
+        <!-- TABELA-->
+        <table class="table table-bordered border border-primary">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1222373</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+
+        <!-- RODAPÉ -->
+    <footer style="background-color: #7B3F00" class=" text-white pt-5 pb-3">
+        <div class="container">
+            <div class="d-flex align-items-center mb-4">
+                <img src="/assets/image/cafe marrom(3).png" alt="CafeBr Logo" width="70" height="64">
+    
+                <div class="ms-4">
+                    <span class="fs-5 fw-bold me-4">CaféBr</span>
+                    <a href="index.html" class="text-white text-decoration-none me-4">Home</a>
+                    <a href="cardapio.html" class="text-white text-decoration-none">Cardápio</a>
+                </div>
+    
+            </div>
+    
+    
+            <hr class="border-secondary my-4" />
+            <section class="mb-4 text-center">
+    
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-facebook"></i></a>
+    
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-twitter"></i></a>
+    
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="bi bi-instagram"></i></a>
+    
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-linkedin"></i></a>
+    
+                <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i class="bi bi-github"></i></a>
+            </section>
+    
+            <div class="text-center mb-3">
+                <a href="#" class="text-white me-3 text-decoration-none">Termos e condições</a>
+                <a href="#" class="text-white text-decoration-none">Política de privacidade</a>
+            </div>
+    
+            <div class="text-center mb-2">
+                <p class="mb-1">© 2025 CaféBr - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/src/script.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
