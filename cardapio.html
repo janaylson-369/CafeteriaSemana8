@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio</title>
+    <link rel="stylesheet" type="text/css" href="./node_modules/toastify-js/src/toastify.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/css/index.css" />
     <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="/assets/css/footer.css" rel="stylesheet">
 
 </head>
 <body>
@@ -42,35 +44,58 @@
                 <div class="d-flex align-items-end">
                     <div class="flex-grow-1">
                         <label for="searchInput" class="form-label">Buscar</label>
-                        <input type="text" id="searchInput" class="form-control border border-primary"
+                        <input type="text" class="form-control border border-primary"
                             placeholder="Digite sua busca...">
                     </div>
                     <div class="ms-2">
-                        <button type="button" id="botao" class="btn btn-primary mb-1" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                        <button type="button" id="botao" class="btn btn-primary mt-3" data-bs-toggle="modal"
+                            data-bs-target="#cardapioModal">
                             +
                         </button>
                     </div>
                 </div>
             </div>
+
+
         
         
         
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal fade" id="cardapioModal" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Item</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar - Item Cardápio</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
-                        <div class="modal-body">
-                            Café Expresso
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Salvar</button>
-                        </div>
+                        <form id="itemCadastrarForm">
+                            <div class="modal-body">
+                        
+                                <!-- Nome -->
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+                                </div>
+                                <!-- Preço -->
+                                <div class="mb-3">
+                                    <label for="preco" class="form-label">Preço</label>
+                                    <input type="text" class="form-control" id="preco" name="preco" placeholder="Preço">
+                                </div>
+                                <!-- Descrição -->
+                                <div class="mb-3">
+                                    <label for="descricao" class="form-label">Descrição</label>
+                                    <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição">
+                                </div>
+                        
+                            </div>
+
+                            <div class="modal-body">                            
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -78,22 +103,18 @@
         </container>
         
         <!-- TABELA-->
-        <table class="table table-bordered border border-primary">
+        <table class="table table-hover table table-bordered border border-primary" id="itensCardapioTable">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Item</th>
+                    <th scope="col">Nome</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Descrição</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1222373</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+            <tbody id="itensCardapioTBody">
+        
+        
             </tbody>
         </table>
 
@@ -101,7 +122,7 @@
 
 
         <!-- RODAPÉ -->
-    <footer style="background-color: #7B3F00" class=" text-white pt-5 pb-3">
+    <footer class=" text-white mt-auto">
         <div class="container">
             <div class="d-flex align-items-center mb-4">
                 <img src="/assets/image/cafe marrom(3).png" alt="CafeBr Logo" width="70" height="64">
@@ -113,9 +134,9 @@
                 </div>
     
             </div>
-    
-    
             <hr class="border-secondary my-4" />
+            
+            <!-- icones-->
             <section class="mb-4 text-center">
     
                 <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-facebook"></i></a>
@@ -140,8 +161,12 @@
             </div>
         </div>
     </footer>
-    <script src="/src/script.js"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>   
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>  
+    <script src="./node_modules/toastify-js/src/toastify.js"></script>
+    <script src="SRC/cardapio.js"></script>
+    
     
 </body>
 </html>
