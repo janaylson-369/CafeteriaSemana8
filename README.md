@@ -13,6 +13,7 @@ cafeteria/
 ├── package-lock.json       # Lockfile para controle de dependências
 ├── assets/
 │   ├── css/
+│   │   └── footer.css
 │   │   └── index.css       # Estilo principal da página
 │   └── image/              # Imagens dos produtos
 │       ├── cafe braco(2).png
@@ -22,8 +23,10 @@ cafeteria/
 │       ├── Expresso.png
 │       └── Pacote de cafe.png
 └── SRC/
-    ├── index.js            # Script da página inicial
+    ├── dataset/
+    │    └── preparacoes.js             
     └── cardapio.js         # Script da página de cardápio
+    └── index.js  # Script da página inicial
 ```
 
 ## 🚀 Funcionalidades
