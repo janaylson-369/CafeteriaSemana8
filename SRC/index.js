@@ -1,32 +1,6 @@
+import { preparacoesCard } from './dataset/preparacoes.js';
 
-
-let itens = [
-    {
-        src: "/assets/image/café preto.png",
-        nome: "café Preto",
-        descricao: "café preto pronto para o seu consumo",
-        preco: "R$ 10,00"
-    },
-    {
-        src: "/assets/image/cappucino.png",
-        nome: "Cappuccino",
-        descricao: "Cappucino dilatada com cafeina proteica",
-        preco: "R$ 25,00"
-    },
-    { 
-        src: "/assets/image/Pacote de cafe.png",
-        nome: "Pacote de café",
-        descricao: "pó de café feito para todos os gostos",
-        preco: "R$ 100,00"
-    },
-    {
-        src: "/assets/image/Expresso.png",
-        nome: "Café Expresso",
-        descricao: "café expresso dilatada com cafeina proteica",
-        preco: "R$ 15,00"
-    }
-];
-
+//Cria e retorna o HTML de um cartão (card) para um item específico.
 let getCartao = (item) => {
     return `
     <div class="col-sm-6 col-md-4 col-lg-3 p-2">
@@ -41,16 +15,26 @@ let getCartao = (item) => {
     </div>`;
 };
 
+//Insere o HTML de um cartão na div principal da página.
+let setCartaoCol = (cartao) => {
+    let cartoesDiv = document.getElementById('cartoes');
+    cartoesDiv.insertAdjacentHTML('beforeend', cartao);
+};
 
+//Itera sobre a lista de preparações e cria um cartão para cada uma.
 let createCartoes = () => {
-    let cartoesdiv = document.getElementById("cartoes");
-    for (let item of itens) {
+    
+    for (let item of preparacoesCard) {
+        // Html completo referente a cada card com o conteúdo.
         let cartao = getCartao(item);
-        cartoesdiv.insertAdjacentHTML("beforeend", cartao);
+
+        // Inserir cartão dentro do código html na div com id cartoes.
+        setCartaoCol(cartao);
     }
 };
 
 createCartoes();
+
 
 
 
